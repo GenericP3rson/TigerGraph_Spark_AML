@@ -11,8 +11,8 @@ object Main {
           "url" -> "jdbc:tg:http://localhost:14240",
           "username" -> "tigergraph",
           "password" -> "tigergraph",
-          "graph" -> "socialNet", // graph name
-          "dbtable" -> "vertex post", // vertex type
+          "graph" -> "AMLSim", // graph name
+          "dbtable" -> "vertex Account", // vertex type
           "limit" -> "10", // number of vertices to retrieve
           "debug" -> "0")).load()
       jdbcDF1.show()
@@ -24,10 +24,10 @@ object Main {
           "url" -> "jdbc:tg:http://127.0.0.1:14240",
           "username" -> "tigergraph",
           "password" -> "tigergraph",
-          "graph" -> "socialNet", // graph name
-          "dbtable" -> "edge friend", // edge type
+          "graph" -> "AMLSim", // graph name
+          "dbtable" -> "edge SEND_TO", // edge type
           "limit" -> "10", // number of edges to retrieve
-          "source" -> "person2", // source vertex id
+          "source" -> "9934", // source vertex id
           "debug" -> "0")).load()
       jdbcDF2.show()
   }
