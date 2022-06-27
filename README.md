@@ -10,8 +10,5 @@ A sample project reading from TigerGraph with Spark
 1. Package the project (`sbt package`)
 1. Run the project 
 ```
-/usr/local/Cellar/apache-spark/3.2.1/bin/spark-submit \                   
-  --class "Main" \
---jars tigergraph-jdbc-driver-1.3.0.jar \
-target/scala-2.12/tigergraph-spark-sample-project_2.12-1.0.jar
+/usr/local/Cellar/apache-spark/3.2.1/bin/spark-submit --class "Main" --jars tigergraph-jdbc-driver-1.3.0.jar target/scala-2.12/tigergraph-spark-sample-project_2.12-1.0.jar
 ```
