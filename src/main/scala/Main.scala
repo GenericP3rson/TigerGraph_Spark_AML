@@ -15,7 +15,7 @@ object Main {
           "dbtable" -> "vertex post", // vertex type
           "limit" -> "10", // number of vertices to retrieve
           "debug" -> "0")).load()
-      println(jdbcDF1.show())
+      jdbcDF1.show()
 
       // read edge
       val jdbcDF2 = spark.read.format("jdbc").options(
@@ -29,6 +29,6 @@ object Main {
           "limit" -> "10", // number of edges to retrieve
           "source" -> "person2", // source vertex id
           "debug" -> "0")).load()
-      println(jdbcDF2.show())
+      jdbcDF2.show()
   }
 }
