@@ -5,7 +5,7 @@ A sample project reading from TigerGraph with Spark
 ## Quickstart
 
 1. Install scala, spark, and sbt (`brew install scala && brew install apache-spark && brew install sbt`)
-1. Load an on-prem socialNet graph
+1. Load an on-premise TigerGraph AMLSim graph
 1. Download the lastest `.jar` file of the JDBC TigerGraph Driver
 1. Package the project (`sbt package`)
 1. Run the project 
