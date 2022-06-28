@@ -12,3 +12,7 @@ A sample project reading from TigerGraph with Spark
 ```
 /usr/local/Cellar/apache-spark/3.2.1/bin/spark-submit --class "Main" --jars tigergraph-jdbc-driver-1.3.0.jar target/scala-2.12/tigergraph-spark-sample-project_2.12-1.0.jar
 ```
+
+## Overview
+
+This repository will walk you through how to get TigerGraph data using Spark. It shows three possible methods to do so: retrieving vertices, retrieving edges, and running queries. 
