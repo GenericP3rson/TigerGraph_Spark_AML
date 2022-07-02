@@ -2,7 +2,7 @@ import org.apache.spark.sql.SparkSession
 
 object Main {
   def main(args: Array[String]) {
-     val spark = SparkSession.builder.appName("Simple Application").getOrCreate()
+     val spark = SparkSession.builder.appName("TigerGraph Application").getOrCreate()
 
       // Read Transaction Vertices -> Read 1000 of the transactions from the TG DB in Spark
       val jdbcDF1 = spark.read.format("jdbc").options(
@@ -17,7 +17,7 @@ object Main {
           "debug" -> "0")).load()
       jdbcDF1.show()
 
-      // Read Edges -> Get all the transaction vertices connected to an account (9934) via the reverse_SEND_TRANSACTION edge
+      // Read Edges -> Get all the transaction vertices connected to an account (9934) via the RECEIVE_TRANSACTION edge
       val jdbcDF2 = spark.read.format("jdbc").options(
         Map(
           "driver" -> "com.tigergraph.jdbc.Driver",
@@ -25,7 +25,7 @@ object Main {
           "username" -> "tigergraph",
           "password" -> "tigergraph",
           "graph" -> "AMLSim", // graph name
-          "dbtable" -> "edge reverse_SEND_TRANSACTION", // edge type
+          "dbtable" -> "edge RECEIVE_TRANSACTION", // edge type
           "limit" -> "10", // number of edges to retrieve
           "source" -> "9934", // source vertex id
           "debug" -> "0")).load()
