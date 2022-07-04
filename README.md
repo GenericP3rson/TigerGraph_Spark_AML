@@ -13,3 +13,5 @@ A sample project reading from TigerGraph with Spark
 ## Overview
 
 This repository will walk you through how to get TigerGraph data using Spark. It shows three possible methods to do so: retrieving vertices, retrieving edges, and running queries. 
+
+Check out a blog walking through the set-up and code [here](https://medium.com/datadriveninvestor/an-introduction-to-spark-and-tigergraph-88b07bb9f66b).
